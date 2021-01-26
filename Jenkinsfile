@@ -13,5 +13,12 @@ pipeline {
                 }
             }
         }
+        stage ("building docker image") {
+            steps {
+                script {
+                    builder = docker.build("${image_name}")
+                }
+            }
+        }
     }
 }
