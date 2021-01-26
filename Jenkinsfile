@@ -6,10 +6,10 @@ pipeline {
     agent any
 
     stages {
-        stage(insstalling dependencies) {
+        stage ("installing dependencies") {
             steps {
                 nodejs("node14") {
-                    sh "npm install"
+                    sh 'npm install'
                 }
             }
         }
